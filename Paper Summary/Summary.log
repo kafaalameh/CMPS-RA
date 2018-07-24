@@ -1,0 +1,267 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6700) (preloaded format=pdflatex 2018.6.30)  5 JUL 2018 07:40
+entering extended mode
+**./Summary.tex
+(Summary.tex
+LaTeX2e <2018-04-01> patch level 5
+
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/koma-script/scrartcl.cls"
+Document Class: scrartcl 2018/03/30 v3.25 KOMA-Script document class (article)
+
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/koma-script/scrkbase.sty"
+Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/koma-script/scrbase.sty"
+Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/graphics/keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/koma-script/scrlfile.sty"
+Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
+)))
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/koma-script/tocbasic.sty"
+Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip41
+\scr@dte@tocline@numbox=\box26
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 134.
+Class scrartcl Info: File `scrsize11pt.clo' used instead of
+(scrartcl)           file `scrsize11.clo' to setup font sizes on input line 211
+4.
+
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/koma-script/scrsize11pt.clo"
+File: scrsize11pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (11pt
+)
+)
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/koma-script/typearea.sty"
+Package: typearea 2018/03/30 v3.25 KOMA-Script package (type area)
+\ta@bcor=\skip42
+\ta@div=\count80
+\ta@hblk=\skip43
+\ta@vblk=\skip44
+\ta@temp=\skip45
+\footheight=\skip46
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1706.
+)
+\c@part=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\scr@dte@part@maxnumwidth=\skip47
+\scr@dte@section@maxnumwidth=\skip48
+\scr@dte@subsection@maxnumwidth=\skip49
+\scr@dte@subsubsection@maxnumwidth=\skip50
+\scr@dte@paragraph@maxnumwidth=\skip51
+\scr@dte@subparagraph@maxnumwidth=\skip52
+\abovecaptionskip=\skip53
+\belowcaptionskip=\skip54
+\c@pti@nb@sid@b@x=\box27
+\scr@dte@figure@maxnumwidth=\skip55
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 5439.
+\c@figure=\count87
+\scr@dte@table@maxnumwidth=\skip56
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 5451.
+\c@table=\count88
+Class scrartcl Info: Redefining `\numberline' on input line 5615.
+\bibindent=\dimen102
+)
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/base/inputenc.sty"
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) (Summary.aux)
+\openout1 = `Summary.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 12.
+
+Overfull \hbox (7.2437pt too wide) in paragraph at lines 29--30
+\OT1/cmr/m/n/10.95 All scientific papers should have new interesting results, e
+specially experimental algorithms
+ []
+
+[1
+
+
+{/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/data/pdftex/config
+/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+
+("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
+/base/omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+
+Overfull \hbox (2.57872pt too wide) in paragraph at lines 31--33
+\OT1/cmr/m/n/10.95 competitor. A lot of the experimental literature is devoted 
+to dominated algorithms. 
+ []
+
+
+Overfull \hbox (4.29341pt too wide) in paragraph at lines 42--43
+\OT1/cmr/m/n/10.95 the negative result in a general paper that talks about undo
+minated algorithms. 
+ []
+
+
+Overfull \hbox (0.64339pt too wide) in paragraph at lines 43--44
+[]\OT1/cmr/m/n/10.95 If the algorithm is of interest and the fact that it is un
+dominated is unexpected.
+ []
+
+
+Overfull \hbox (6.11836pt too wide) in paragraph at lines 45--46
+\OT1/cmr/m/n/10.95 Note that since run-time depends strongly on implementations
+ or machine/operating
+ []
+
+[2]
+Overfull \hbox (1.3429pt too wide) in paragraph at lines 70--71
+\OT1/cmr/m/n/10.95 the literature can guide the experimentalist in the right di
+rection of research by suggesting
+ []
+
+
+Overfull \hbox (36.07878pt too wide) in paragraph at lines 70--71
+\OT1/cmr/m/n/10.95 If it's not possible to obtain the implementation, you must 
+develop a comparable implementation.
+ []
+
+[3]
+Overfull \hbox (5.38837pt too wide) in paragraph at lines 82--84
+\OT1/cmr/m/n/10.95 which the optimal value is known doesn't give information ab
+out how the algorithm's
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 90.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 90.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 90.
+
+Overfull \hbox (8.73296pt too wide) in paragraph at lines 91--93
+\OT1/cmr/m/n/10.95 The experimenter's time can be reduced by having helpful REA
+DME files, descriptive
+ []
+
+
+Overfull \hbox (25.49373pt too wide) in paragraph at lines 97--100
+\OT1/cmr/m/n/10.95 (which are independent of the speed-up mechanisms), one may 
+tend to save programming
+ []
+
+
+Overfull \hbox (6.8179pt too wide) in paragraph at lines 97--100
+\OT1/cmr/m/n/10.95 More efficient code means you can perform experiments on mor
+e and larger instances.
+ []
+
+[4]
+Overfull \hbox (5.10402pt too wide) in paragraph at lines 115--117
+[]\OT1/cmr/m/it/10.95 For randomly generated instances, report the percentage e
+xcess over an estimate
+ []
+
+
+Overfull \hbox (22.60414pt too wide) in paragraph at lines 117--119
+\OT1/cmr/m/n/10.95 It is a useful approach assuming the lower bound can be calc
+ulated or approximated
+ []
+
+
+Overfull \hbox (4.95232pt too wide) in paragraph at lines 122--124
+\OT1/cmr/m/n/10.95 time and take the best solution found so far. However, such 
+results are irreproducible
+ []
+
+[5] [6]
+Overfull \hbox (8.97752pt too wide) in paragraph at lines 159--161
+\OT1/cmr/m/n/10.95 In order to convince the reader that the data supports the c
+onclusions and conjectures
+ []
+
+[7]
+Overfull \hbox (11.53253pt too wide) in paragraph at lines 165--168
+\OT1/cmr/m/n/10.95 Focus on measuring run-times and memory usage in order to ev
+aluate the performance
+ []
+
+[8] [9] (Summary.aux) ) 
+Here is how much of TeX's memory you used:
+ 2283 strings out of 494891
+ 45623 string characters out of 3176685
+ 208208 words of memory out of 3000000
+ 5954 multiletter control sequences out of 15000+200000
+ 9427 words of font info for 33 fonts, out of 3000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 41i,6n,51p,9115b,209s stack positions out of 5000i,500n,10000p,200000b,50000s
+</Users/kafaalameh/Library/Application Support/MiKTeX/te
+xmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/kafaalameh/Libra
+ry/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></Users/kafaalameh/Library/Application S
+upport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/k
+afaalameh/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/
+amsfonts/cm/cmssbx10.pfb></Users/kafaalameh/Library/Application Support/MiKTeX/
+texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/kafaalameh/Lib
+rary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/c
+mti10.pfb>
+Output written on Summary.pdf (9 pages, 119472 bytes).
+PDF statistics:
+ 60 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

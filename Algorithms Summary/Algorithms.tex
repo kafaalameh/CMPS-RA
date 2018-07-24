@@ -1,0 +1,100 @@
+\documentclass[]{scrartcl}
+\usepackage{amsmath}
+%opening
+\title{}
+\author{Kafa Alameh}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Krylov subspace methods}
+Krylov subspace methods are polynomial iterative methods that aim to solve linear equations of the form $Ax=b$ where A is a known $n \times n$ matrix, $b$ is a known $n \times 1$ vector and $x$ is an $n \times 1$ vector of unknowns. The following are Krylov projection methods. These methods impose a constraint of the residuals by requiring them to form an orthogonal set and the A-orthogonality of of the search directions, except for coop-CG and MSD-CG.
+\subsection{Conjugate Gradient (CG)}
+An iterative Krylov projection method restricted for symmetric positive definite (SPD) (Hermitian) matrices:
+\begin{itemize}
+	\item $Ax=b$
+	\item $A=A^{T}$
+	\item $x^{T}Ax>0$ $\forall x \neq 0$
+\end{itemize}
+Given an initial guess or iterate $x_{0}$, at the $k^{th}$ iteration CG generates $\{x_{k}\}$ by minimizing a function $\phi(x)$. CG finds an approximate solution $x_{k}=x_{k-1}+\alpha_{k}p_{k}$, where $p_{k}$ is a vector, the search direction, $\alpha_{k}$ is a scalar determining the step length. \\ Minimizing $\phi(x)=\frac{1}{2}x^{T}Ax-b^{T}x$ ($\nabla \phi(x)=0$) is equivalent to solving $Ax=b$. \\ The convergence criterion is set as $||r_{k}||_{2} \leq \epsilon||b||_{2},$ for some $\epsilon \in \Re.$ \\
+Input: 
+\begin{itemize}
+	\item SPD $n\times n$ matrix A, $n\times 1$ vector b
+	\item initial guess or iterate $x_{0}$
+	\item stopping tolerance $\epsilon$, the maximum allowed iterations $k_{max}$ 
+\end{itemize}
+Output:
+\begin{itemize}
+	\item the approximate solution $x_{k}$ 
+\end{itemize}
+\paragraph{The Algorithm:}
+\begin{enumerate}
+	\item Start with some $x_{0}$. Set $p_{0}=r_{0}=b-Ax_{0}$. Set $\rho_{0}=||r_{0}||_{2}^{2}$. Set $k=0$
+	\item while ($\sqrt{\rho_{k-1}} > \epsilon ||b||_{2}$ and $k<k_{max}$) do
+	\item \qquad $x_{k+1}=x_{k}+\alpha_{k}p_{k}$, $\alpha_{k}=\frac{r_{k}^{T}r_{k}}{p^{T}_{k}}$
+	\item \qquad $r_{k+1}=b-Ax_{k+1}=r_{k}-\alpha_{k}Ap_{k}$
+	\item \qquad $p_{k+1}=r_{k+1}+\beta_{k}p_{k}$, $\beta_{k}=\frac{r^{T}_{k+1}r_{k+1}}{r^{T}_{k}r_{k}}$
+	\item \qquad $\rho_{k}=||r_{k+1}||_{2}^{2}$
+	\item end while
+\end{enumerate}
+\subsection{Block conjugate gradient (B-CG)}
+Similar to CG, B-CG solves a SPD system with multiple right-hand sides:
+\begin{itemize}
+	\item $AX=B$
+	\item $A=A^{T}$
+	\item $x^{T}Ax>0$ $\forall x \neq 0$
+\end{itemize}
+where $A$ is an $n\times n$ matrix, $X \in \Re^{n\times t}$ is a block vector and $B$ is a block vector of size $n\times t$ containing multiple right hand sides. \\
+Input: 
+\begin{itemize}
+	\item SPD $n\times n$ matrix A, $n\times t$ block B of $t$ right hand sides
+	\item block of $t$ initial guesses or iterates $X_{0}$
+	\item stopping tolerance $\epsilon$, the maximum allowed iterations $k_{max}$ 
+\end{itemize}
+Output:
+\begin{itemize}
+	\item the block of $t$ approximate solutions $X_{k}$ 
+\end{itemize}
+\paragraph{The Algorithm:}
+\begin{enumerate}
+		\item Start with some $X_{0}$. Set $=R_{0}=B-AX_{0}$. Set $\rho_{0}=||R_{0}||_{2}^{2}$. Set $k=0$
+		\item while ($\sqrt{\rho_{k-1}} > \epsilon ||B||_{2}$ and $k<k_{max}$) do
+		\item \qquad if($k=1$) then let $P=R_{0}$ 
+		\item \qquad else let $P=R+P\beta$
+		\item \qquad \qquad orthogonalize the vectors of P against each other and define $\gamma$ as a $t\times t$ full rank freely chosen matrix  
+		\item \qquad end if
+		\item \qquad $X_{k+1}=X_{k}+\alpha_{k+1}P_{k+1}$, $\alpha_{k+1}=\frac{R_{k}^{T}R_{k}\gamma_{k}^{T}}{P^{T}_{k+1}AP_{k+1}}$
+		\item \qquad $R_{k+1}=R_{k}-AP_{k+1}\alpha_{k+1}$
+		\item \qquad $P_{k+2}=(R_{k+1}+P_{k+1}\beta_{k+2})\gamma_{k+2}$, $\beta_{k+2}=\frac{R^{T}_{k+1}R_{k+1}}{\gamma_{k+1}R^{T}_{k}R_{k}}$
+		\item \qquad $\rho_{k}=||R_{k+1}||_{2}^{2}$
+		\item end while
+\end{enumerate}
+\subsection{S-step conjugate gradient}
+A parallelizable version of Krylov methods where s iterations of classical Krylov methods are merged and computed simultaneously. Instead of one iteration at a time, the iterations are performed in blocks of s.
+We have s directions $p_{k}$ so that we can write: \\ $x_{k+s}=x_{k}+\alpha_{k}p_{k}+...+\alpha_{k+s-1}p_{k+s-1}=x_{k}+P_{k}a_{k}$ \\ where $P_{k}=[p_{k}, ..., p_{k+s-1}]$ and $a_{k}=[\alpha_{k}, ..., \alpha_{k+s-1}]$ \\
+The residual can be expressed as $r_{k+s}=r_{k}-AP_{k}a_{k}$ \\
+The next direction is expressed as a combination of previous directions and the basis vectors since we have the basis for Krylov subspace for s iterations: $B_{k}=[r_{k}, Ar_{k}, ..., A^{s-1}r_{k}]$
+$P_{k+1}=B_{k}+P_{k}\beta_{k}$, where $\beta_{k}$ is a $s\times s$ matrix.
+As before, we get expressions for $\alpha_{k}$ and $\beta_{k}$ by enforcing orthogonality of residual and search directions.\\
+$\alpha_{k}=\frac{P^{T}_{k}r_{k-1}}{P^{T}_{k}AP_{k}}$ and $\beta_{k}=\frac{P^{T}_{k}AB_{k}}{P^{T}_{k}AP_{k}}$. \\
+Input: 
+\begin{itemize}
+	\item SPD $n\times n$ matrix A, $n\times 1$ vector b
+	\item initial guess or iterate $x_{0}$, the number of steps per iteration s
+	\item stopping tolerance $\epsilon$, the maximum allowed iterations $k_{max}$ 
+\end{itemize}
+Output:
+\begin{itemize}
+	\item the approximate solution $x_{k}$ 
+\end{itemize}
+The algorithm is the same as before but with an additional definition of $P=[r, Ar, ..., A^{s-1}r]$ at the beginning and the definition of $B=[r, Ar, ..., A^{s-1}r]$ in the while loop.
+\subsection{Cooperative-CG (coop-CG)}
+Similar to block conjugate gradient, coop-CG make all search directions conjugate to each other. Coop-CG solves the system $Ax=b$ by starting with t distinct initial guesses. This is equivalent to solving the system $AX=b*ones(1,t)$. Given $X_{0}$ as a the vector containing $t$ initial guesses, the block residual is given by $R_{0}=AX_{0}-b*ones(1,t)$. The algorithm is exactly the same as B-CG with $\gamma_{k}=I$. The convergence criterion is also defined as before. However, since we have a block of residuals, $\rho$ is defined as $\rho=min(||R_{0}(:,1)||_{2}^{2}, ||R_{0}(:,2)||_{2}^{2}, ..., ||R_{0}(:,t-1)||_{2}^{2}, ||R_{0}(:,t)||_{2}^{2})$.
+\subsection{Multiple search directions CG (MSD-CG)}
+MSD-CG solves the system $Ax=b$ by partitioning $A$'s domain into $t$ subdomains and defining a search direction on each of the $t$ subdomains. MSD-CG does not have the A-orthogonality of the search domains. However, $\beta_{k}$ is chosen such that the global search direction $p^{k}$ is A-orthogonal to the previous domain search direction $p^{k-1}$, i.e. $(p^{k})^{T}AP_{k-1}=0$, for $i=1,2, ...,t$. At each iteration k, a search direction $p_{i}^{k}$ is efined on each of the $t$ subdomains ($\delta_{i,}i=1, 2, ..., t$) such that $p_{i}^{k}(\delta_{j})=0$ for all $j\neq i$. Given a matrix containing all the search directions $P_{k}=[p_{1}^{k}, p_{2}^{k}, ..., p_{t}^{k}]$ and the vector $\alpha_{k}$ of size $t$, at the $k^{th}$ iteration, the approximate solution is defined as $x_{k}=x_{k-1}+P_{k}\alpha_{k}$. $\alpha_{k}$ and $\beta_{k}$ are defined as $\alpha_{k}=\frac{P_{k}^{T}r_{k-1}}{P_{k}^{T}AP_{k}}$ and $\beta_{k}=\frac{P_{k-1}^{T}Ar_{k-1}}{P_{k-1}^{T}AP_{k-1}}$.  
+\end{document}
