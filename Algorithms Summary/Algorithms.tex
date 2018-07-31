@@ -13,7 +13,7 @@
 \end{abstract}
 
 \section{Krylov subspace methods}
-Krylov subspace methods are polynomial iterative methods that aim to solve linear equations of the form $Ax=b$ where A is a known $n \times n$ matrix, $b$ is a known $n \times 1$ vector and $x$ is an $n \times 1$ vector of unknowns. The following are Krylov projection methods. These methods impose a constraint of the residuals by requiring them to form an orthogonal set and the A-orthogonality of of the search directions, except for coop-CG and MSD-CG.
+Krylov subspace methods are polynomial iterative methods that aim to solve linear equations of the form $Ax=b$ where A is a known $n \times n$ matrix, $b$ is a known $n \times 1$ vector and $x$ is an $n \times 1$ vector of unknowns. The following are Krylov projection methods. These methods impose a constraint of the residuals by requiring them to form an orthogonal set and the A-orthogonality of the search directions, except for MSD-CG.
 \subsection{Conjugate Gradient (CG)}
 An iterative Krylov projection method restricted for symmetric positive definite (SPD) (Hermitian) matrices:
 \begin{itemize}
@@ -68,9 +68,9 @@ Output:
 		\item \qquad else let $P=R+P\beta$
 		\item \qquad \qquad orthogonalize the vectors of P against each other and define $\gamma$ as a $t\times t$ full rank freely chosen matrix  
 		\item \qquad end if
-		\item \qquad $X_{k+1}=X_{k}+\alpha_{k+1}P_{k+1}$, $\alpha_{k+1}=\frac{R_{k}^{T}R_{k}\gamma_{k}^{T}}{P^{T}_{k+1}AP_{k+1}}$
+		\item \qquad $X_{k+1}=X_{k}+\alpha_{k+1}P_{k+1}$, $\alpha_{k+1}=(P^{T}_{k+1}AP_{k+1})^{-1}\gamma_{k}^{T}R_{k}^{T}R_{k}$
 		\item \qquad $R_{k+1}=R_{k}-AP_{k+1}\alpha_{k+1}$
-		\item \qquad $P_{k+2}=(R_{k+1}+P_{k+1}\beta_{k+2})\gamma_{k+2}$, $\beta_{k+2}=\frac{R^{T}_{k+1}R_{k+1}}{\gamma_{k+1}R^{T}_{k}R_{k}}$
+		\item \qquad $P_{k+2}=(R_{k+1}+P_{k+1}\beta_{k+2})\gamma_{k+2}$, $\beta_{k+2}=\gamma_{k+1}^{-1}(R^{T}_{k}R_{k})^{-1}R^{T}_{k+1}R_{k+1}$
 		\item \qquad $\rho_{k}=||R_{k+1}||_{2}^{2}$
 		\item end while
 \end{enumerate}
@@ -81,7 +81,7 @@ The residual can be expressed as $r_{k+s}=r_{k}-AP_{k}a_{k}$ \\
 The next direction is expressed as a combination of previous directions and the basis vectors since we have the basis for Krylov subspace for s iterations: $B_{k}=[r_{k}, Ar_{k}, ..., A^{s-1}r_{k}]$
 $P_{k+1}=B_{k}+P_{k}\beta_{k}$, where $\beta_{k}$ is a $s\times s$ matrix.
 As before, we get expressions for $\alpha_{k}$ and $\beta_{k}$ by enforcing orthogonality of residual and search directions.\\
-$\alpha_{k}=\frac{P^{T}_{k}r_{k-1}}{P^{T}_{k}AP_{k}}$ and $\beta_{k}=\frac{P^{T}_{k}AB_{k}}{P^{T}_{k}AP_{k}}$. \\
+$\alpha_{k}=(P^{T}_{k}AP_{k})^{-1}P^{T}_{k}r_{k-1}  $ and $\beta_{k}=(P^{T}_{k}AP_{k})^{-1}P^{T}_{k}AB_{k}$. \\
 Input: 
 \begin{itemize}
 	\item SPD $n\times n$ matrix A, $n\times 1$ vector b
@@ -96,5 +96,5 @@ The algorithm is the same as before but with an additional definition of $P=[r, 
 \subsection{Cooperative-CG (coop-CG)}
 Similar to block conjugate gradient, coop-CG make all search directions conjugate to each other. Coop-CG solves the system $Ax=b$ by starting with t distinct initial guesses. This is equivalent to solving the system $AX=b*ones(1,t)$. Given $X_{0}$ as a the vector containing $t$ initial guesses, the block residual is given by $R_{0}=AX_{0}-b*ones(1,t)$. The algorithm is exactly the same as B-CG with $\gamma_{k}=I$. The convergence criterion is also defined as before. However, since we have a block of residuals, $\rho$ is defined as $\rho=min(||R_{0}(:,1)||_{2}^{2}, ||R_{0}(:,2)||_{2}^{2}, ..., ||R_{0}(:,t-1)||_{2}^{2}, ||R_{0}(:,t)||_{2}^{2})$.
 \subsection{Multiple search directions CG (MSD-CG)}
-MSD-CG solves the system $Ax=b$ by partitioning $A$'s domain into $t$ subdomains and defining a search direction on each of the $t$ subdomains. MSD-CG does not have the A-orthogonality of the search domains. However, $\beta_{k}$ is chosen such that the global search direction $p^{k}$ is A-orthogonal to the previous domain search direction $p^{k-1}$, i.e. $(p^{k})^{T}AP_{k-1}=0$, for $i=1,2, ...,t$. At each iteration k, a search direction $p_{i}^{k}$ is efined on each of the $t$ subdomains ($\delta_{i,}i=1, 2, ..., t$) such that $p_{i}^{k}(\delta_{j})=0$ for all $j\neq i$. Given a matrix containing all the search directions $P_{k}=[p_{1}^{k}, p_{2}^{k}, ..., p_{t}^{k}]$ and the vector $\alpha_{k}$ of size $t$, at the $k^{th}$ iteration, the approximate solution is defined as $x_{k}=x_{k-1}+P_{k}\alpha_{k}$. $\alpha_{k}$ and $\beta_{k}$ are defined as $\alpha_{k}=\frac{P_{k}^{T}r_{k-1}}{P_{k}^{T}AP_{k}}$ and $\beta_{k}=\frac{P_{k-1}^{T}Ar_{k-1}}{P_{k-1}^{T}AP_{k-1}}$.  
+MSD-CG solves the system $Ax=b$ by partitioning $A$'s domain into $t$ subdomains and defining a search direction on each of the $t$ subdomains. MSD-CG does not have the A-orthogonality of the search domains. However, $\beta_{k}$ is chosen such that the global search direction $p^{k}$ is A-orthogonal to the previous domain search direction $p^{k-1}$, i.e. $(p^{k})^{T}AP_{k-1}=0$, for $i=1,2, ...,t$. At each iteration k, a search direction $p_{i}^{k}$ is efined on each of the $t$ subdomains ($\delta_{i,}i=1, 2, ..., t$) such that $p_{i}^{k}(\delta_{j})=0$ for all $j\neq i$. Given a matrix containing all the search directions $P_{k}=[p_{1}^{k}, p_{2}^{k}, ..., p_{t}^{k}]$ and the vector $\alpha_{k}$ of size $t$, at the $k^{th}$ iteration, the approximate solution is defined as $x_{k}=x_{k-1}+P_{k}\alpha_{k}$. $\alpha_{k}$ and $\beta_{k}$ are defined as $\alpha_{k}=(P_{k}^{T}AP_{k})^{-1}P_{k}^{T}r_{k-1}$ and $\beta_{k}=(P_{k-1}^{T}AP_{k-1})^{-1}P_{k-1}^{T}Ar_{k-1} $.  
 \end{document}

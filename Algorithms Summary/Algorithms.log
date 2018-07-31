@@ -1,34 +1,29 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6700) (preloaded format=pdflatex 2018.6.30)  24 JUL 2018 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.19)  31 JUL 2018 17:00
 entering extended mode
-**./Algorithms.tex
-(Algorithms.tex
-LaTeX2e <2018-04-01> patch level 5
-
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/koma-script/scrartcl.cls"
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Algorithms.tex
+(./Algorithms.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2018/03/30 v3.25 KOMA-Script document class (article)
-
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/koma-script/scrkbase.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrkbase.sty
 Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/koma-script/scrbase.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrbase.sty
 Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/graphics/keyval.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/koma-script/scrlfile.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
 )))
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/koma-script/tocbasic.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/tocbasic.sty
 Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box26
@@ -40,13 +35,11 @@ Class scrartcl Info: File `scrsize11pt.clo' used instead of
 (scrartcl)           file `scrsize11.clo' to setup font sizes on input line 211
 4.
 
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/koma-script/scrsize11pt.clo"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
 File: scrsize11pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (11pt
 )
 )
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/koma-script/typearea.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2018/03/30 v3.25 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count80
@@ -100,30 +93,24 @@ Package tocbasic Info: omitting babel extension for `lot'
 Class scrartcl Info: Redefining `\numberline' on input line 5615.
 \bibindent=\dimen102
 )
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/amsmath/amsmath.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip57
 
 For additional information on amsmath, use the `?' option.
-
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/amsmath/amstext.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/amsmath/amsgen.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen103
 ))
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/amsmath/amsbsy.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/amsmath/amsopn.sty"
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count89
@@ -163,7 +150,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (Algorithms.aux)
+)
+(./Algorithms.aux)
 \openout1 = `Algorithms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -179,9 +167,7 @@ LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
-
-("/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/tex/latex
-/base/omscmr.fd"
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -189,49 +175,38 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
  [1
 
 
-{/Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/data/pdftex/config
-/pdftex.map}] [2]
-Overfull \hbox (15.17813pt too wide) in paragraph at lines 78--86
-\OT1/cmr/m/n/10.95 vectors since we have the basis for Krylov subspace for s it
-erations: $\OML/cmm/m/it/10.95 B[] \OT1/cmr/m/n/10.95 = [\OML/cmm/m/it/10.95 r[
-]; Ar[]; :::; A[]r[]\OT1/cmr/m/n/10.95 ]$
- []
-
-
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
 Overfull \hbox (14.24309pt too wide) in paragraph at lines 95--96
-\OT1/cmr/m/n/10.95 The algorithm is the same as before but with an additional d
-efinition of $\OML/cmm/m/it/10.95 P \OT1/cmr/m/n/10.95 = [\OML/cmm/m/it/10.95 r
-; Ar; :::; A[]r\OT1/cmr/m/n/10.95 ]$
+\OT1/cmr/m/n/10.95 The al-go-rithm is the same as be-fore but with an ad-di-tio
+nal def-i-ni-tion of $\OML/cmm/m/it/10.95 P \OT1/cmr/m/n/10.95 = [\OML/cmm/m/it
+/10.95 r; Ar; :::; A[]r\OT1/cmr/m/n/10.95 ]$
  []
 
-[3] [4] (Algorithms.aux) ) 
+[3] [4] (./Algorithms.aux) ) 
 Here is how much of TeX's memory you used:
- 2879 strings out of 494891
- 52744 string characters out of 3176685
- 211507 words of memory out of 3000000
- 6537 multiletter control sequences out of 15000+200000
- 9898 words of font info for 36 fonts, out of 3000000 for 9000
- 0 hyphenation exceptions out of 8191
- 41i,6n,51p,9111b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
-</Users/kafaalameh/Library/Application Support/MiKTeX
-/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/kafaalameh/Li
-brary/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/
-cmmi6.pfb></Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/
-fonts/type1/public/amsfonts/cm/cmmi8.pfb></Users/kafaalameh/Library/Application
- Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users
-/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></Users/kafaalameh/Library/Application Support/MiKTeX/t
-exmfs/install/fonts/type1/public/amsfonts/cm/cmr6.pfb></Users/kafaalameh/Librar
-y/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></Users/kafaalameh/Library/Application Support/MiKTeX/texmfs/install/fonts
-/type1/public/amsfonts/cm/cmssbx10.pfb></Users/kafaalameh/Library/Application S
-upport/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Users/
-kafaalameh/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public
-/amsfonts/cm/cmsy6.pfb></Users/kafaalameh/Library/Application Support/MiKTeX/te
-xmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Algorithms.pdf (4 pages, 134458 bytes).
+ 2877 strings out of 492649
+ 51542 string characters out of 6129622
+ 216414 words of memory out of 5000000
+ 6793 multiletter control sequences out of 15000+600000
+ 9898 words of font info for 36 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,6n,51p,9109b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmssbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb>
+Output written on Algorithms.pdf (4 pages, 118111 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
