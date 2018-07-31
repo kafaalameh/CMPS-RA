@@ -1,0 +1,80 @@
+\documentclass[]{scrartcl}
+\usepackage{hyperref}
+
+\begin{document}
+\abstract{The following are a summary of relevant sparse linear solvers available from PETSc (I included what I thought we will use based on what I learned from the thesis). \\ In short, the types of matrices are:
+	\begin{itemize}
+		\item sparse matrices
+		\item block sparse matrices
+		\item sequential sparse matrices, based on compressed sparse row format
+		\item sequential block sparse matrices, based on block sparse compressed row format
+	\end{itemize} 
+\section{Krylov Methods: Conjugate Gradients (KSPCG)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/KSP/KSPCG.html} \\
+The Preconditioned Conjugate Gradient (PCG) iterative method.
+\begin{itemize}
+	\item Requires both the matrix and preconditioner to be symmetric positive (or negative) (semi) definite.
+	\item Only left preconditioning is supported.
+	\item Parallel and complex.
+	\item For complex numbers there are two different CG methods, one for Hermitian symmetric matrices and one for non-Hermitian symmetric matrices.
+\end{itemize}
+\section{Krylov Methods: GMRES (KSPGMRES)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/KSP/KSPGMRES.html} \\
+Left and right preconditioning are supported, but not symmetric preconditioning.
+\section{CG for Least Squares (KSPCGLS)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/KSP/KSPCGLS.html}
+Conjugate Gradient method for Least-Squares problems
+\begin{itemize}
+	\item Supports non-square (rectangular) matrices.
+	\item Parallel and complex.
+\end{itemize}
+\section{Preconditioner: Jacobi (PCJACOBI)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCJACOBI.html}
+Diagonal scaling preconditioning. \\
+Parallel and complex. \\
+Matrix Types:
+\begin{enumerate}
+	\item MATAIJ = "aij" - A matrix type to be used for sparse matrices.
+	\item MATBAIJ = "baij" - A matrix type to be used for block sparse matrices.
+	\item MATSBAIJ = "sbaij" - A matrix type to be used for symmetric block sparse matrices.
+	\item MATDENSE = "dense" - A matrix type to be used for dense matrices.
+\end{enumerate}
+\section{Preconditioner: Point Block Jacobi (PCPBJACOBI)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCPBJACOBI.html} \\
+Uses dense LU factorization with partial pivoting to invert the blocks; if a zero pivot is detected a PETSc error is generated. \\
+Parallel and complex.\\
+Matrix Types:
+\begin{enumerate}
+	\item AIJ
+	\item BAIJ
+\end{enumerate}
+\section{Preconditioner: Block Jacobi (PCBJACOBI)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCBJACOBI.html} \\
+Use block Jacobi preconditioning, each block is (approximately) solved with its own KSP object. \\
+Each processor can have one or more blocks, or a single block can be shared by several processes. Defaults to one block per processor. \\
+Parallel and complex.\\
+Matrix Types:
+\begin{enumerate}
+	\item AIJ
+	\item BAIJ
+	\item SBAIJ
+\end{enumerate}
+\section{Preconditioner: ILU (PCILU)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCILU.html} \\
+For BAIJ matrices this implements a point block ILU. \\
+Parallel and complex.\\
+Matrix Types:
+\begin{enumerate}
+	\item MATSEQAIJ = "seqaij" - A matrix type to be used for sequential sparse matrices, based on compressed sparse row format.
+	\item MATSEQBAIJ = "seqbaij" - A matrix type to be used for sequential block sparse matrices, based on block sparse compressed row format.
+\end{enumerate}
+\section{Direct Solvers: Cholesky (PCCHOLESKY)}
+\url{http://www.mcs.anl.gov/petsc/petsc-current/docs/manualpages/PC/PCCHOLESKY.html} \\
+Uses a direct solver, based on Cholesky factorization, as a preconditioner. \\ 
+Usually this will compute an "exact" solution in one iteration. \\
+Matrix Types:
+\begin{enumerate}
+	\item seqaij
+	\item seqbaij
+\end{enumerate}
+\end{document}

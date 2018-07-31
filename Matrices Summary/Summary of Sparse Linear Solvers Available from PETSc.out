@@ -1,0 +1,8 @@
+\BOOKMARK [1][-]{section.1}{Krylov Methods: Conjugate Gradients \(KSPCG\)}{}% 1
+\BOOKMARK [1][-]{section.2}{Krylov Methods: GMRES \(KSPGMRES\)}{}% 2
+\BOOKMARK [1][-]{section.3}{CG for Least Squares \(KSPCGLS\)}{}% 3
+\BOOKMARK [1][-]{section.4}{Preconditioner: Jacobi \(PCJACOBI\)}{}% 4
+\BOOKMARK [1][-]{section.5}{Preconditioner: Point Block Jacobi \(PCPBJACOBI\)}{}% 5
+\BOOKMARK [1][-]{section.6}{Preconditioner: Block Jacobi \(PCBJACOBI\)}{}% 6
+\BOOKMARK [1][-]{section.7}{Preconditioner: ILU \(PCILU\)}{}% 7
+\BOOKMARK [1][-]{section.8}{Direct Solvers: Cholesky \(PCCHOLESKY\)}{}% 8
