@@ -6,3 +6,7 @@
 \BOOKMARK [1][-]{section.6}{Preconditioner: Block Jacobi \(PCBJACOBI\)}{}% 6
 \BOOKMARK [1][-]{section.7}{Preconditioner: ILU \(PCILU\)}{}% 7
 \BOOKMARK [1][-]{section.8}{Direct Solvers: Cholesky \(PCCHOLESKY\)}{}% 8
+\BOOKMARK [1][-]{section.9}{Matrix Collection}{}% 9
+\BOOKMARK [1][-]{section.10}{Free Linear Algebra Software}{}% 10
+\BOOKMARK [1][-]{section.11}{CG}{}% 11
+\BOOKMARK [1][-]{section.12}{B-CG}{}% 12

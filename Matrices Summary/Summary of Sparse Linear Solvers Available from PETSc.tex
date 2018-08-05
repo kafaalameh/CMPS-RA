@@ -77,4 +77,31 @@ Matrix Types:
 	\item seqaij
 	\item seqbaij
 \end{enumerate}
+
+\section{Matrix Collection}
+Set of widely used set of sparse matrix benchmarks collected from a wide range of applications.
+Link:
+\url{https://sparse.tamu.edu/} \\
+	
+\section{Free Linear Algebra Software}
+\url{http://www.netlib.org/utk/people/JackDongarra/la-sw.html} \\
+\url{http://www.netlib.org/lapack/\#_presentation} \\
+	
+CG using Jacobi preconditioner:\\
+\url{https://www.npmjs.com/package/conjugate-gradient} \\
+	
+Iterative methods library:\\
+\url{https://math.nist.gov/iml++/ } \\
+\section{CG}
+Github repository: High Performance Computing Conjugate Gradients: The original Mantevo miniapp \\
+\url{https://github.com/Mantevo/HPCCG} 
+\begin{itemize}
+\item Generates a 27-point finite difference matrix with a user-prescribed sub-block size on each processor
+\item Code compiles with MPI support and can be run on one or more processors
+\item Input: nx, ny, nz are the number of nodes in the x, y and z dimension respectively on a each processor. The global grid dimensions will be nx, ny and numproc * nz. In other words, the domains are stacked in the z direction.
+\end{itemize}
+\section{B-CG}
+Paper: An Implementation of Block Conjugate Gradient Algorithm on CPU-GPU Processors \\
+Link to paper: \\ 
+\url{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7017966}
 \end{document}
