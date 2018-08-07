@@ -1,0 +1,17 @@
+\documentclass[]{scrartcl}
+\usepackage{hyperref}
+
+\begin{document}
+	\section{Timing Functions}
+	In order to compute the processor time, the difference between values returned by two different calls to clock(), one at the start and other at the end of the program is used. To convert the value to seconds, it needs to be divided by a macro $CLOCKS\_PER\_SEC$. \\
+	The \textbf{clock()} time may advance faster or slower than the actual wall clock. It depends on how the operating system allocates the resources for the process. \\
+	If the processor is shared by other processes, the \textbf{clock()} time may advance slower than the wall clock. While if the current process is executed in a multi-threaded system, the \textbf{clock()} time may advance faster than wall clock.\\
+	\textbf{clock() prototype:} clock$\_$t \textbf{clock()}; \\
+	\textbf{clock()} return value: 
+	\begin{itemize}
+		\item On success, the clock() function returns the processor time used by the program till now.
+		\item On failure, it returns -1 that is casted to the type clock$\_$t.
+	\end{itemize}
+	Using the function int clock$\_$gettime(clockid$\_$t clock$\_$id,
+	struct timespec *tp ), we can pass either one of the two following IDS: CLOCK$\_$PROCESS$\_$CPUTIME$\_$ID or \\ CLOCK$\_$THREAD$\_$CPUTIME$\_$ID. \\ The former is a high-resolution per-process timer from the CPU and the latter is thread-specific CPU-time clock.
+\end{document}
